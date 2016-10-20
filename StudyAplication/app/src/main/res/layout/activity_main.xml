@@ -16,15 +16,24 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
         <TextView
+            android:id="@+id/text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="MainActivity"
             tools:ignore="HardcodedText"/>
 
         <Button
+            android:id="@+id/button01"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="test"
+            android:text="明示的intent"
+            tools:ignore="HardcodedText"/>
+
+        <Button
+            android:id="@+id/button02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="暗黙的intent"
             tools:ignore="HardcodedText"/>
     </LinearLayout>
 </LinearLayout>
