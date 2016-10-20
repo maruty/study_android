@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="app.maruty.com.studyaplication">
+          package="app.maruty.com.studyaplication" >
+          <!--ここもbundle.gradleで記載したら不要となる要素-->
+          <!--android:versionCode="1"
+          android:versionName="1.0"-->
+
+<!-- bundle.gradleに記載してあったら不要となる要素
+    <uses-sdk android:minSdkVersion="integer"
+              android:targetSdkVersion="integer"
+              android:maxSdkVersion="integer" />
+              -->
 
     <application
         android:allowBackup="true"
@@ -15,6 +24,10 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity android:name=".SubActivity">
+        </activity>
     </application>
+
+
 
 </manifest>
