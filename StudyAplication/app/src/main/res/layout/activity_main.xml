@@ -57,6 +57,24 @@
             android:text="Mediatorパターン確認用"
             tools:ignore="HardcodedText"/>
 
+        <!--styleについて
+        個別の View に設定するには、レイアウトの XML ファイルの View 要素に style 属性を追加します。
+        一方、アクティビティやアプリケーション全体に設定するには、Android マニフェストの <activity> 要素または <application> 要素に android:theme 属性を追加します。
+
+        スタイルがあらゆる View 要素に適用されるようにすることは可能です。そのためには、スタイルをテーマとして適用します。
+        スタイル定義をテーマとして適用するには、そのスタイルを Android マニフェスト内の Activity またはアプリケーションに適用する必要があります。
+        その場合には、アクティビティやアプリケーション内のあらゆる View が、サポートする各プロパティを適用します。
+        たとえば、先ほどの例にあった CodeFont スタイルをアクティビティに適用すると、テキストのスタイル
+        プロパティをサポートしているすべての View 要素がそれを適用します。 そのプロパティをサポートしない View はそれらを無視します。 View がそのプロパティの一部しかサポートしていない場合は、サポートするプロパティのみが適用されます。
+           -->
+
+        <TextView
+            style="@style/CodeFont"
+            android:text="CodeFontのstyleで出力" />
+
+        <TextView
+            style="@style/CodeFont.Big"
+            android:text="Bigのstyleで出力" />
 
     </LinearLayout>
 </LinearLayout>
