@@ -26,6 +26,8 @@
         </activity>
         <activity android:name=".SubActivity">
         </activity>
+        <activity android:name=".MediatorActivity">
+        </activity>
     </application>
 
 

@@ -49,5 +49,14 @@
             android:layout_height="wrap_content"
             android:text="parcelable確認"
             tools:ignore="HardcodedText"/>
+
+        <Button
+            android:id="@+id/button04"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mediatorパターン確認用"
+            tools:ignore="HardcodedText"/>
+
+
     </LinearLayout>
 </LinearLayout>

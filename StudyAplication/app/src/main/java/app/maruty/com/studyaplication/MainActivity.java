@@ -21,17 +21,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         //ライフサイクル確認用
-        Toast.makeText(this.getApplicationContext(),"onCreate", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this.getApplicationContext(),"onCreate", Toast.LENGTH_SHORT).show();
 
         //各種ボタンのオブジェクト
         Button button1 = (Button)findViewById(R.id.button01);
         Button button2 = (Button)findViewById(R.id.button02);
         Button button3 = (Button)findViewById(R.id.button03);
+        Button button4 = (Button)findViewById(R.id.button04);
 
         //各種ボタンのリスナー
         button1.setOnClickListener(this);
         button2.setOnClickListener(this);
         button3.setOnClickListener(this);
+        button4.setOnClickListener(this);
 
     }
 
@@ -39,7 +41,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onStart() {
         super.onStart();
         //ライフサイクル確認用
-        Toast.makeText(this.getApplicationContext(),"onStart", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this.getApplicationContext(),"onStart", Toast.LENGTH_SHORT).show();
 
     }
 
@@ -48,7 +50,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onResume(){
         super.onResume();
         //ライフサイクル確認用
-        Toast.makeText(this.getApplicationContext(),"onResume", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this.getApplicationContext(),"onResume", Toast.LENGTH_SHORT).show();
 
     }
 
@@ -56,7 +58,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onPause(){
         super.onPause();
         //ライフサイクル確認用
-        Toast.makeText(this.getApplicationContext(),"onPause", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this.getApplicationContext(),"onPause", Toast.LENGTH_SHORT).show();
 
     }
 
@@ -72,7 +74,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onDestroy() {
         super.onDestroy();
         //ライフサイクル確認用
-        Toast.makeText(this.getApplicationContext(),"onDestroy", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this.getApplicationContext(),"onDestroy", Toast.LENGTH_SHORT).show();
 
     }
 
@@ -80,7 +82,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onRestart() {
         super.onRestart();
         //ライフサイクル確認用
-        Toast.makeText(this.getApplicationContext(),"onRestart", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this.getApplicationContext(),"onRestart", Toast.LENGTH_SHORT).show();
     }
 
     public void onClick(View v){
@@ -99,12 +101,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.button03:
                 //Parcelableサンプル
-                SampleParcelable sampleParcelable = new SampleParcelable();
+                SampleParcelable sampleParcelable = new SampleParcelable("unko",32,"ぶりぶりざえもん");
+
                 Intent intent3 = new Intent(this, SubActivity.class);
                 intent3.putExtra("parcelable",sampleParcelable);
                 startActivity(intent3);
                 break;
-
+            case R.id.button04:
+                //Mediatorパターン用の画面遷移
+                Intent intent4 = new Intent(this ,MediatorActivity.class);
+                startActivity(intent4);
             default:
                 break;
         }
